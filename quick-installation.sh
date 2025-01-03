@@ -1,19 +1,5 @@
 #!/bin/bash
 
-clear
-echo -e "\033[1;32m
-██████╗ ██╗   ██  ███████╗  ███████╗  ███████╗  
-██╔══██╗ ██╗ ██║  ██║   ██║ ██║   ██║ ██║   ██║
-██████╔╝  ████║   ██║   ██║ ██║   ██║ ██║   ██║
-██╔══██╗   ██╔╝   ██║   ██║ ██║   ██║ ██║   ██║
-██║  ██║   ██║    ███████║  ███████║  ███████║
-╚═╝  ╚═╝   ╚═╝    ╚══════╝  ╚══════╝  ╚══════╝
-\033[0m"
-echo -e "\033[1;34m==================================================\033[1;34m"
-echo -e "\033[1;34m@Ryddd | Testnet, Node Runer, Developer, Retrodrop\033[1;34m"
-
-sleep 4
-
 # Periksa apakah skrip dijalankan sebagai pengguna root
 if [ "$(id -u)" != "0" ]; then
     echo "\033[1;34mSkrip ini perlu dijalankan dengan hak akses root.\033[1;34m"
@@ -69,7 +55,7 @@ echo "\033[1;34mBerhasil masuk ke direktori chromium\033[1;34m"
 function deploy_browser() {
     # Minta input dari pengguna
     read -p "Masukkan CUSTOM_USER: " CUSTOM_USER
-    read -sp "Masukkan PASSWORD: " PASSWORD
+    read -p "Masukkan PASSWORD: " PASSWORD
     read -p "Masukkan port yang akan diakses: " ACCESS_PORT
     echo
 
@@ -129,11 +115,11 @@ function main_menu() {
         \033[0m"
         echo -e "\033[1;34m==================================================\033[1;34m"
         echo -e "\033[1;34m@Ryddd | Testnet, Node Runer, Developer, Retrodrop\033[1;34m"
-        echo "Untuk keluar dari skrip, tekan tombol Ctrl + C"
-        echo "Pilih tindakan yang ingin dilakukan:"
-        echo "1) Deploy browser"
-        echo "2) Hapus node (docker down untuk menghapus kontainer)"
-        echo "3) Keluar"
+        echo -e "Untuk keluar dari skrip, tekan tombol Ctrl + C"
+        echo -e "Pilih tindakan yang ingin dilakukan:"
+        echo -e "1) Deploy browser"
+        echo -e "2) Hapus node (docker down untuk menghapus kontainer)"
+        echo -e "3) Keluar"
         
         read -p "Masukkan pilihan Anda: " choice
         
